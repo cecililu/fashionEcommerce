@@ -3,16 +3,15 @@ import { Search } from './Search'
 
 export const NavBar = () => {
   return (
-    <div className='grid grid-cols-3 gap-4 my-4 p-4 items-center'> 
-        <div className='logo '>
-          <span className='text-cyan-600 font-bold text-3xl'> CompanyLogo</span> 
-        </div>   
-        <div className='Search'>
+    <div className='grid grid-cols-1 gap-1 my-4 p-2 items-center sm:grid-cols-4'> 
+        <div className='logo flex justify-start  lg:flex justify-center'>
+          <span className='text-cyan-600 font-bold text-3xl ml-2 flex '> Com Logo</span> 
+       </div>   
+        
+        <div className='Search px-1 col-span-2 sm:col-span-3 px-2 lg:col-span-2 px-12'>
           <Search/>
         </div>
-        <div className='add'>
-          ADD SPACE
-        </div>
+        <div className='invisible lg:visible'>NEW OFFER</div>
     </div>
   )
 }
