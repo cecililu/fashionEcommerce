@@ -5,7 +5,7 @@ export const Head = () => {
   return (
     <>
     <section className="head bg-cyan-500 text-white">
-    <div className="flex flex-row-reverse ">
+    <div className="flex flex-row lg:flex-row-reverse ">
         <Link to="/customercare">
         <div className='mx-4'>Customer Care</div>
         </Link>
