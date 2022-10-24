@@ -11,15 +11,17 @@ import { CostumerCare } from './Components/programs/CostumerCare';
 import { SignIn } from './Components/programs/SignIn';
 import { SignUp } from './Components/programs/SignUp';
 import { Navigation } from './Components/utils/Navigation';
+import { Sidebar } from './Components/Sidebar/Sidebar';
+
 function App() {
   return (
 
     <div className="App">
         <BrowserRouter>
+        
           <Header/> 
-                <Navigation/>
-           
-        </BrowserRouter>
+          <Navigation/>
+          </BrowserRouter>
            
         
     </div>
