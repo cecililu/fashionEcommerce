@@ -5,10 +5,10 @@ import { Search } from './Search'
 
 export const Header = () => {
   return (
-   <>
+   <div className=''>
    <Head/>
    <Search/>
    <NavBar/>
-   </>
+   </div>
   )
 }

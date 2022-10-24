@@ -4,7 +4,7 @@ import {Link} from "react-router-dom";
 export const Head = () => {
   return (
     <>
-    <section className="head">
+    <section className="head bg-cyan-500 text-white">
     <div className="flex flex-row-reverse ">
         <Link to="/customercare">
         <div className='mx-4'>Customer Care</div>
