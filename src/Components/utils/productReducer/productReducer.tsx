@@ -2,8 +2,8 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 
 
 
-export const fetchCategory = createAsyncThunk("category/thunk", async () =>
-  fetch("https://fakestoreapi.com/products/categories")
+export const fetchProduct = createAsyncThunk("product/thunk", async () =>
+  fetch("https://fakestoreapi.com/products")
     .then((res) => res.json())
     .then((data) => {
        return data;
@@ -14,21 +14,21 @@ const initialState = {
     error: "",
     loading: false,
   };
-const categorySlice = createSlice({
-  name: "category",
+const productSlice = createSlice({
+  name: "product",
   initialState: initialState,
   reducers: {
     // standard reducer logic, with auto-generated action types per reducer
   },
   extraReducers: function (builder) {
-    builder.addCase(fetchCategory.pending, (state, action) => {
+    builder.addCase(fetchProduct.pending, (state, action) => {
       return {
         loading: true,
         error: "",
         data: [],
       };
     });
-    builder.addCase(fetchCategory.fulfilled, (state, action) => {
+    builder.addCase(fetchProduct.fulfilled, (state, action) => {
       console.log(
         "🚀 ~ file: Reducer4.js ~ line 35 ~ builder.addCase ~ action",
         action
@@ -39,7 +39,7 @@ const categorySlice = createSlice({
         data: action.payload,
       };
     });
-    builder.addCase(fetchCategory.rejected, (state, action) => {
+    builder.addCase(fetchProduct.rejected, (state, action) => {
       return {
         loading: false,
         error: "Could not get Category",
@@ -49,4 +49,4 @@ const categorySlice = createSlice({
   },
 });
 
-export default categorySlice.reducer;
+export default productSlice.reducer;
