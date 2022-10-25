@@ -6,7 +6,7 @@ export const MainPage = () => {
     <div>
       <div className="grid grid-cols-5 ">
             <div className="col-span-1">
-            <Sidebar/>
+             <Sidebar/>
               </div> 
              <div className="main">
               Main

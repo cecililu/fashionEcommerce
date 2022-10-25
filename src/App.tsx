@@ -11,7 +11,7 @@ import { CostumerCare } from './Components/programs/CostumerCare';
 import { SignIn } from './Components/programs/SignIn';
 import { SignUp } from './Components/programs/SignUp';
 import { Navigation } from './Components/utils/Navigation';
-import { Sidebar } from './Components/Sidebar/Sidebar';
+// import { Sidebar } from './Components/Sidebar/Sidebar';
 import { store } from './Components/utils/Store/store';
 import { Provider } from 'react-redux';
 
