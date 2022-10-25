@@ -13,17 +13,18 @@ export const ProductDispay = () => {
       dispatch(fetchProduct()) 
       
      }, [])
-
+    //  console.log('Here are my product',productData.data)
+    
+     const productList=productData.data
+     .map(data=>{
+        //  console.log(data)
+         return(
+         <Card data={data}/>)
+        })
   return (
-    <div className='container mx-auto  '>
+    <div className='container mx-auto mt-12'>
         <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 my-4 p-4 '>
-            <Card/>
-            <Card/>
-            <Card/>
-            <Card/>
-            <Card/>
-            <Card/>
-            <Card/>
+           {productList}
         </div>
     </div>
   )

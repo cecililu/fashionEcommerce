@@ -8,8 +8,7 @@ import productReducer from "../productReducer/productReducer"
 export const store= configureStore({
   reducer:{
     categoryReducer,
-    
-
+    productReducer
   } 
   
   
