@@ -12,10 +12,12 @@ import { SignIn } from './Components/programs/SignIn';
 import { SignUp } from './Components/programs/SignUp';
 import { Navigation } from './Components/utils/Navigation';
 import { Sidebar } from './Components/Sidebar/Sidebar';
+import { store } from './Components/utils/Store/store';
+import { Provider } from 'react-redux';
 
 function App() {
   return (
-
+    <Provider store={store}>
     <div className="App">
         <BrowserRouter>
         
@@ -25,6 +27,7 @@ function App() {
            
         
     </div>
+    </Provider>
   );
 }
 
