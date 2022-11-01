@@ -26,7 +26,7 @@ export const SignIn = () => {
   return (
     <><section className="h-screen">
     <div className="px-6 h-full text-gray-800 flex justify-center mt-12">
-     
+      
         <div className="xl:ml-20 xl:w-5/12 lg:w-5/12 md:w-8/12 mb-12 md:mb-0">
           <form  onSubmit={formik.handleSubmit}>
               <p className="text-center  mx-4 text-2xl my-10">Sign In to Shop Now !</p>
