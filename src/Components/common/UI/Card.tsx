@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const Card = (data: { [x: string]: string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | React.ReactFragment | React.ReactPortal | null | undefined }) => {
+export const Card = (data:any) => {
      
     return (
     <div className="w-full max-w-sm bg-white rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
