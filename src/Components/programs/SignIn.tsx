@@ -1,25 +1,27 @@
 import React from 'react'
 import { useFormik } from 'formik';
 import * as yup from 'yup';
+import axios from 'axios';
 
 export const SignIn = () => {
-    let schema = yup.object().shape({
+    
+      let schema = yup.object().shape({
       email: yup.string().required(),
       password: yup.string().required(),
      })
-
-
-   const formik = useFormik({
+   
+    const formik = useFormik({
       initialValues: {
       email: '',
       password: ''},
       
-      onSubmit: values => {
-        
-        alert(JSON.stringify(values, null, 2));
+      onSubmit: async(values) => {
+       const res=await axios.post('https://reqres.in/api/login.com',values)
       },
       validationSchema:schema 
      })
+  
+     
  
   return (
     <><section className="h-screen">
