@@ -1,6 +1,30 @@
 import React from 'react'
+import * as yup from 'yup';
+import axios from 'axios';
 
+
+
+import { useFormik } from 'formik';
 export const SignUp = () => {
+
+  let schema = yup.object().shape({
+    email: yup.string().required(),
+    password: yup.string().required(),
+   })
+ 
+  const formik = useFormik({
+    initialValues: {
+    fullName:'',
+    email: '',
+    password: '',
+    confirm_password:''
+  },
+    
+    onSubmit: async(values) => {
+     const res=await axios.post('https://reqres.in/api/login.com',values)
+    },
+    validationSchema:schema 
+   })
   return (
     <section className="h-screen">
       <div className="px-6 h-full text-gray-800 flex justify-center mt-12">
@@ -11,23 +35,23 @@ export const SignUp = () => {
             <input 
                 type="text"
                 className="form-control block w-full px-4 py-2  text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
-                name="fullname"
-                placeholder="Full Name" />
+                id="fullname"
+                placeholder="Full Name" onChange={formik.handleChange} />
                 </div>
             
             <div className="mb-6">
             <input 
                 type="text"
                 className="form-control block w-full px-4 py-2  text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
-                name="email"
-                placeholder="Email" />
+                id="email"
+                placeholder="Email"  onChange={formik.handleChange}/>
             </div>
 
             <div className="mb-6">
             <input 
                 type="password"
                 className="form-control block w-full px-4 py-2  text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
-                name="password"
+                id="password"
                 placeholder="Password" />
             </div>
 
@@ -35,8 +59,8 @@ export const SignUp = () => {
             <input 
                 type="password"
                 className="form-control block w-full px-4 py-2  text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
-                name="confirm_password"
-                placeholder="Confirm Password" />
+                id="confirm_password"
+                placeholder="Confirm Password" onChange={formik.handleChange}/>
               </div >  
 
             <div className="text-center text-sm text-grey-dark  my-2">

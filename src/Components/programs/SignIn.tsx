@@ -1,34 +1,44 @@
 import React from 'react'
-import { useFormik } from 'formik';
+import { Formik } from 'formik';
 import * as yup from 'yup';
 import axios from 'axios';
 
 export const SignIn = () => {
     
       let schema = yup.object().shape({
-      email: yup.string().required(),
+      email:  yup.string().email().required(),
       password: yup.string().required(),
      })
    
-    const formik = useFormik({
-      initialValues: {
-      email: '',
-      password: ''},
-      
-      onSubmit: async(values) => {
-       const res=await axios.post('https://reqres.in/api/login.com',values)
-      },
-      validationSchema:schema 
-     })
   
      
  
   return (
-    <><section className="h-screen">
+     
+    <section className="h-screen">
     <div className="px-6 h-full text-gray-800 flex justify-center mt-12">
       
         <div className="xl:ml-20 xl:w-5/12 lg:w-5/12 md:w-8/12 mb-12 md:mb-0">
-          <form  onSubmit={formik.handleSubmit}>
+        <Formik
+            initialValues= {{ email: '', password: ''}}
+            
+            onSubmit={ async(values) => {
+              console.log("submitted")
+            const res=await axios.post('https://reqres.in/api/login.com',values)
+            }}
+            validationSchema={schema} 
+          >
+          {({
+         values,
+         errors,
+         touched,
+         handleChange,
+         handleBlur,
+         handleSubmit,
+         isSubmitting,
+         /* and other goodies */
+       }) =>  
+          <form  onSubmit={handleSubmit}>
               <p className="text-center  mx-4 text-2xl my-10">Sign In to Shop Now !</p>
  
             <div className="mb-6">
@@ -37,9 +47,13 @@ export const SignIn = () => {
                 className="form-control block w-full px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
                 id="email"
                 placeholder="Email address"
-                onChange={formik.handleChange}
-                
+                onChange={handleChange}
+               
               />
+              <span className="flex items-center font-medium tracking-wide text-red-500 text-xs mt-1 ml-1">
+			        {errors.email  ?errors.email: ''}
+	   	        </span>
+          
             </div>
             <div className="mb-6">
               <input
@@ -47,9 +61,13 @@ export const SignIn = () => {
                 className="form-control block w-full px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
                 id="password"
                 placeholder="Password"
-                onChange={formik.handleChange}
+                onChange={handleChange}
+                
                 
               />
+               <span className="flex items-center font-medium tracking-wide text-red-500 text-xs mt-1 ml-1">
+			        {errors.password}
+	   	        </span>
             </div>
   
             <div className="flex justify-between items-center mb-6">
@@ -81,9 +99,10 @@ export const SignIn = () => {
                   >Register</a>
               </p>
             </div>
-          </form>
+          </form>}
+        </Formik>
         </div>
         </div>
-  </section></>
+  </section>
   )
 }
