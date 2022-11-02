@@ -15,13 +15,11 @@ function App() {
     <Provider store={store}>
     <div className="App">
         <BrowserRouter>
-        
-          <Header/> 
-          <Navigation/>
-          </BrowserRouter>
-           <ProductDispay/>
+           <Header/> 
+           <Navigation/>
+           
            <Footer/>
-        
+           </BrowserRouter>
     </div>
     </Provider>
   );
