@@ -1,23 +1,23 @@
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { Card } from '../common/UI/Card'
+import { fetchProductDetail } from '../utils/productDetailReducer/productDetailReducer'
 import { fetchProduct } from '../utils/productReducer/productReducer'
 import {AppDispatch} from '../utils/Store/store'
 import { AppState} from '../utils/types/types'
 
-export const ProductDispay = () => {
+export const ProductDisplay = () => {
 
-    const productData=useSelector((state:AppState)=>state.productReducer)
+   
     const dispatch=useDispatch<AppDispatch>()
-      useEffect(() => {
-      dispatch(fetchProduct()) 
+    const productData=useSelector((state:AppState)=>state.productReducer)
       
+    useEffect(() => {
+      dispatch(fetchProductDetail()) 
      }, [])
-    //  console.log('Here are my product',productData.data)
     
      const productList=productData.data
      .map(data=>{
-        //  console.log(data)
          return(
          <Card data={data}/>)
         })

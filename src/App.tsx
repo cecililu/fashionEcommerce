@@ -7,7 +7,7 @@ import {
 import { Navigation } from './Components/utils/Navigation';
 import { store } from './Components/utils/Store/store';
 import { Provider } from 'react-redux';
-import { ProductDispay } from './Components/programs/ProductDispay';
+// import { ProductDispay } from './Components/programs/ProductDispay';
 import { Footer } from './Components/common/UI/Footer';
 
 function App() {

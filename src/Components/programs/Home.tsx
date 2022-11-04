@@ -1,12 +1,12 @@
 import React from 'react'
 import { CategoryNavigation } from './CategoryNavigation'
-import { ProductDispay } from './ProductDispay'
+import { ProductDisplay } from './ProductDisplay'
 
 export const Home = () => {
   return (
     <>
      <CategoryNavigation/>
-    <ProductDispay/>
+    <ProductDisplay/>
    
     </>
   )
