@@ -1,9 +1,11 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 export const Card = (data:any) => {
-     
+    let id='product/'+data.data['id']
     return (
     <div className="w-full max-w-sm bg-white rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
+        <Link to={id}>
     <a href="#">
         <img className="object-fill h-48 w-50 mx-auto " src={data.data['image']} alt="product image" />
     </a>
@@ -24,6 +26,7 @@ export const Card = (data:any) => {
             <a href="#" className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Add to cart</a>
         </div>
     </div>
+    </Link>
 </div>
   )
 }

@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { Card } from '../common/UI/Card'
-import { fetchProductDetail } from '../utils/productDetailReducer/productDetailReducer'
 import { fetchProduct } from '../utils/productReducer/productReducer'
 import {AppDispatch} from '../utils/Store/store'
 import { AppState} from '../utils/types/types'
@@ -13,7 +12,7 @@ export const ProductDisplay = () => {
     const productData=useSelector((state:AppState)=>state.productReducer)
       
     useEffect(() => {
-      dispatch(fetchProductDetail()) 
+      dispatch(fetchProduct()) 
      }, [])
     
      const productList=productData.data
