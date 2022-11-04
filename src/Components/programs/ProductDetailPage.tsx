@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
+import { useParams } from 'react-router-dom'
 import { Card } from '../common/UI/Card'
 import { fetchProductDetail } from '../utils/productDetailReducer/productDetailReducer'
 
@@ -8,11 +9,12 @@ import { AppState} from '../utils/types/types'
 
    
 export const ProductDetailPage = () => {
+    let {userId}=useParams()  
     const dispatch=useDispatch<AppDispatch>()
     const productData=useSelector((state:AppState)=>state.productDetailReducer)
     
     useEffect(() => {
-        dispatch(fetchProductDetail()) 
+        dispatch(fetchProductDetail({userId})) 
        }, [])
   return (
     <section className="max-h-full pb-20 px-20 ml-20">

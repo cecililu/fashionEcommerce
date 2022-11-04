@@ -1,9 +1,10 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+import { useParams } from "react-router-dom";
 
 
+export const fetchProductDetail = createAsyncThunk("productDetail/thunk", async ({userId}:any) =>
 
-export const fetchProductDetail = createAsyncThunk("productDetail/thunk", async () =>
-  fetch("https://fakestoreapi.com/products/1")
+  fetch("https://fakestoreapi.com/products/"+userId)
     .then((res) => res.json())
     .then((data) => {
        return data;
