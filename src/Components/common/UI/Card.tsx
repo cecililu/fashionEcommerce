@@ -5,12 +5,12 @@ export const Card = (data:any) => {
     console.log(data)
     let id='product/'+data.data['id']
     return (
-    <div className="w-full  bg-white rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
+    <div className="w-full max-w-sm bg-white rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
         <Link to={id}>
     <a href="#">
-        <img className="object-fill sm:h-20 lg:h-48 w-50 mx-auto " src={data.data['image']} alt="product image" />
+        <img className="object-fill h-48 w-50 mx-auto " src={data.data['image']} alt="product image" />
     </a>
-    <div className="pb-5">
+    <div className=" pb-5">
             <h5 className="text-xl font-semibold tracking-tight text-gray-900 dark:text-white flex-start">{data.data['title']}</h5>
         
         <div className="flex items-center mt-2.5 mb-5">

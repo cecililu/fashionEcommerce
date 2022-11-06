@@ -26,7 +26,7 @@ export const Sidebar = () => {
   }
 
   return (
-    <div className='sidebar bg-cyan-300 text-white invisible sm:visible'>
+    <div className='sidebar bg-cyan-300 text-white invisible md:visible'>
       {categoryList} 
     </div>
   )
