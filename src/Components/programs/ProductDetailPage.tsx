@@ -17,8 +17,8 @@ export const ProductDetailPage = () => {
        }, [])
   return (
     <section className="max-h-full pb-20  mx-auto">
-    <div className=" text-gray-800 flex justify-center lg:mt-12 mx-auto border lg:p-25 lg:m-40">
-      <div className="mx-5 sm:grid grid-cols-1 lg:grid-cols-5 gap-2  mx-auto lg:mt-10 border">
+    <div className=" text-gray-800 flex justify-center lg:mt-12 mx-auto  lg:p-25 lg:m-40">
+      <div className="mx-5 sm:grid grid-cols-1 lg:grid-cols-5 gap-2  mx-auto lg:mt-10 ">
         <img alt={productData.data['image']} className="object-contain h-52 md:h-80 sm:col-span-1 mx-auto" src={productData.data['image']}/>
         <div className=" lg:py-10 lg:px-20 col-span-1 lg:col-span-4 ">
           <h2 className="text-sm title-font text-gray-500 tracking-widest mt-5">{productData.data['category']}</h2>
