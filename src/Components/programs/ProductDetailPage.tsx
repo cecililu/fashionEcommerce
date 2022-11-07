@@ -3,7 +3,6 @@ import { useDispatch, useSelector } from 'react-redux'
 import { useParams } from 'react-router-dom'
 import { Card } from '../common/UI/Card'
 import { fetchProductDetail } from '../utils/productDetailReducer/productDetailReducer'
-
 import {AppDispatch} from '../utils/Store/store'
 import { AppState} from '../utils/types/types'
 
