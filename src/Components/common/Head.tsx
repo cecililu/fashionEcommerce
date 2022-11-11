@@ -1,7 +1,12 @@
 import React from 'react'
+import { useSelector } from 'react-redux';
 import {Link} from "react-router-dom";
+import { AppState} from '../utils/types/types'
 
 export const Head = () => {
+
+  const cart:any=useSelector((state:AppState)=>state.cartReducer)
+
   return (
     <>
     <section className="head bg-cyan-500 text-white">
@@ -16,6 +21,10 @@ export const Head = () => {
         
         <Link to="/signup">
         <div className='mx-4'>Sign Up</div>
+        </Link>
+
+        <Link to="/cart">
+        <div className='mx-4'>Cart<span className='bg-red-700 px-2 mx-2 rounded-full' >{cart.cartTotalQuantity}</span></div>
         </Link>
       </div>
     </section>

@@ -10,7 +10,7 @@ import { AppState} from '../utils/types/types'
 export const ProductDetailPage = () => {
     let {userId}=useParams()  
     const dispatch=useDispatch<AppDispatch>()
-    const productData=useSelector((state:AppState)=>state.productDetailReducer)
+    const productData:any=useSelector((state:AppState)=>state.productDetailReducer)
     
     useEffect(() => {
         dispatch(fetchProductDetail({userId})) 
