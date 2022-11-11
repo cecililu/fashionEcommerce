@@ -22,7 +22,7 @@ export const Card = (data:any) => {
     <a href="#">
         <img className="object-fill h-48 w-50 mx-auto " src={data.data['image']} alt="product image" />
     </a>
-    <div className=" pb-5">
+    <div className=" ">
             <h5 className="text-xl font-semibold  text-gray-900 dark:text-white flex-start">{data.data['title']}</h5>
         
         <div className="flex justify-center items-center mt-2.5 mb-5">
@@ -36,7 +36,7 @@ export const Card = (data:any) => {
         
     </div>
     </Link>
-    <div className="flex justify-around items-center">
+    <div className="flex justify-around items-center pb-3">
             <span className="text-xl font-bold text-gray-900 dark:text-white">${data.data['price']}</span>
             
             <button  onClick={()=>handleaddToCart(data)} className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Add to cart</button>
