@@ -19,9 +19,9 @@ export const Card = (data:any) => {
     return (
     <div className="w-full max-w-sm bg-white rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
         <Link to={id}>
-    <a href="#">
-        <img className="object-fill h-48 w-50 mx-auto " src={data.data['image']} alt="product image" />
-    </a>
+   
+        <img className="object-fill h-48 w-50 mx-auto my-3" src={data.data['image']} alt="product image" />
+    
     <div className=" ">
             <h5 className="text-xl font-semibold  text-gray-900 dark:text-white flex-start">{data.data['title']}</h5>
         
