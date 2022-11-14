@@ -10,9 +10,9 @@ export const CartPage = () => {
   const cartItemList=cart.items.map((item:any)=><CartItem data={item}/>)
   return (
   <section className="bg-gray-100">
-  <div className="container mx-auto mt-10">
+  <div className="container mx-auto mt-10 grid grid-cols-5  gap-x-2 lg:gap-x-8">
    
-      <div className="w-full bg-white px-10 py-10">
+      <div className="sm:col-span-5 lg:col-span-4 bg-white px-10 py-10">
         <div className="flex justify-between border-b pb-8">
           <h1 className="font-semibold text-2xl">Shopping Cart</h1>
           <h2 className="font-semibold text-2xl">Items {cart.cartTotalQuantity}</h2>
@@ -35,8 +35,7 @@ export const CartPage = () => {
           Continue Shopping
         </a>
       </div>
-
-      {/* <div id="summary" className="w-1/4 px-8 py-10">
+      <div id="summary" className="sm:w-full sm:col-span-5 lg:col-span-1 lg:ml-20 p-10  bg-cyan-400 text-white">
         <h1 className="font-semibold text-2xl border-b pb-8">Order Summary</h1>
         <div className="flex justify-between mt-10 mb-5">
           <span className="font-semibold text-sm uppercase">Items 3</span>
@@ -60,7 +59,9 @@ export const CartPage = () => {
           </div>
           <button className="bg-indigo-500 font-semibold hover:bg-indigo-600 py-3 text-sm text-white uppercase w-full">Checkout</button>
         </div>
-      </div> */}
+      </div>
+
+      
   </div>
 </section>
   )
