@@ -45,3 +45,7 @@ export const Card = (data:any) => {
 </div>
   )
 }
+
+
+
+
