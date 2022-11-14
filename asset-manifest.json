@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/fashionEcommerce/static/css/main.44ed4116.css",
+    "main.js": "/fashionEcommerce/static/js/main.669d234c.js",
+    "static/js/787.c2c1715b.chunk.js": "/fashionEcommerce/static/js/787.c2c1715b.chunk.js",
+    "index.html": "/fashionEcommerce/index.html",
+    "main.44ed4116.css.map": "/fashionEcommerce/static/css/main.44ed4116.css.map",
+    "main.669d234c.js.map": "/fashionEcommerce/static/js/main.669d234c.js.map",
+    "787.c2c1715b.chunk.js.map": "/fashionEcommerce/static/js/787.c2c1715b.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.44ed4116.css",
+    "static/js/main.669d234c.js"
+  ]
+}
