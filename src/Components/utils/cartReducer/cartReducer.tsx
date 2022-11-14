@@ -3,8 +3,8 @@ const initialState = {
                    items:[],
                    cartTotalQuantity:0,
                    cartTotal:0,
-
                  }
+
 const cartSlice = createSlice({
   name: 'counter',
   initialState,
@@ -14,16 +14,14 @@ const cartSlice = createSlice({
       const index=state.items.findIndex((item:any)=>{
               return item.data.id===action.payload.data.id
             })
+      console.log(index)
       //aready exist
       if (index>=0){ 
-        console.log(index,'already exists',state.items)
-        state.items[index].cartQuanity+=1
-        console.log('already exists',state.items[index].cartQuanity)
+        state.items[index]['cartQuantity'] =state.items[index]['cartQuantity'] +1
     
-        
       }else{
       //not exist
-      console.log('new product added exists')
+      // console.log('new product added exists')
       const tempProduct={...action.payload,cartQuantity:1}
       state.items=[...state.items,tempProduct];
 
