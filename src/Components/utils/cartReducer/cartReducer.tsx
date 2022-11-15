@@ -34,14 +34,31 @@ const cartSlice = createSlice({
         return item.data.id===action.payload.id
       })
       state.items[index]['cartQuantity'] =state.items[index]['cartQuantity'] +1
+      state.cartTotalQuantity=state.items.reduce((prevValue:any, currentValue:any) => prevValue + currentValue.cartQuantity,0)
+     
     },
     decreaseQuantity(state: any,action) {
       const index=state.items.findIndex((item:any)=>{
        return item.data.id===action.payload.data.id
      })
      state.items[index]['cartQuantity'] =state.items[index]['cartQuantity'] -1
-   }
+     state.cartTotalQuantity=state.items.reduce((prevValue:any, currentValue:any) => prevValue + currentValue.cartQuantity,0)
+     
+    },
+   remove(state: any,action) {
+   
+    const index=state.items.findIndex((item:any)=>{
+      console.log('inside filter ', item.data.id,action.payload.id)
+      return item.data.id===action.payload.id
+   })
+
+   state.items=state.items.filter((item: { data: { id: any } })=>item.data.id!==state.items[index].data.id)
+   console.log(state.items)
+   
+   state.cartTotalQuantity=state.items.reduce((prevValue:any, currentValue:any) => prevValue + currentValue.cartQuantity,0)
+     
+  }
   },
 })
-export const { addItem ,decreaseQuantity,increaseQuantity} = cartSlice.actions
+export const { addItem ,decreaseQuantity,increaseQuantity,remove} = cartSlice.actions
 export default cartSlice.reducer

@@ -9,7 +9,7 @@ export const CartPage = () => {
   console.log('cart is ',cart)
   const cartItemList=cart.items.map((item:any)=><CartItem data={item}/>)
   return (
-  <section className="bg-gray-100">
+  <section className="bg-gray-100 mb-`5">
   <div className="container mx-auto mt-10 grid grid-cols-5  gap-x-2 lg:gap-x-8">
    
       <div className="sm:col-span-5 lg:col-span-4 bg-white px-10 py-10">
@@ -35,7 +35,7 @@ export const CartPage = () => {
           Continue Shopping
         </a>
       </div>
-      <div id="summary" className="sm:w-full sm:col-span-5 lg:col-span-1 lg:ml-20 p-10  bg-cyan-400 text-white">
+      <div id="summary" className="sm:w-full sm:col-span-5 md:col-span-1 lg:ml-20 p-10  bg-cyan-400 text-white">
         <h1 className="font-semibold text-2xl border-b pb-8">Order Summary</h1>
         <div className="flex justify-between mt-10 mb-5">
           <span className="font-semibold text-sm uppercase">Items 3</span>
