@@ -1,6 +1,6 @@
 import React from 'react'
 import { Sidebar } from '../Sidebar/Sidebar'
-
+import banner from '../../banner.jpg'
 export const CategoryNavigation = () => {
   return (
     <div>
@@ -9,7 +9,7 @@ export const CategoryNavigation = () => {
              <Sidebar/>
               </div> 
              <div className="main bg-cyan-200 col-span-5 lg:col-span-4 ">
-               <img className="" src="banner.jpg" alt="product image" />
+               <img className="" src={banner} alt="product image" />
              </div>
           </div>
     </div>
