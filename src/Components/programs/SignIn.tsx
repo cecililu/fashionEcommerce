@@ -15,8 +15,8 @@ export const SignIn = () => {
  
   return (
      
-    <section className="h-screen">
-    <div className="px-6 h-full text-gray-800 flex justify-center mt-12">
+    <section className="mb-10">
+    <div className="mb-10 px-6 h-full text-gray-800 flex justify-center mt-12">
       
         <div className="xl:ml-20 xl:w-5/12 lg:w-5/12 md:w-8/12 mb-12 md:mb-0">
         <Formik

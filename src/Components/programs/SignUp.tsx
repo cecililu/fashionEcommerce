@@ -26,8 +26,8 @@ export const SignUp = () => {
     validationSchema:schema 
    })
   return (
-    <section className="h-screen">
-      <div className="px-6 h-full text-gray-800 flex justify-center mt-12">
+    <section className="">
+      <div className="px-6  text-gray-800 flex justify-center mt-20">
         <div className="xl:ml-20 xl:w-5/12 lg:w-5/12 md:w-8/12 mb-12 md:mb-0">
             <h1 className="mt-8 mb-8 text-2xl text-center">Sign up to shop with us Now!</h1>
             
