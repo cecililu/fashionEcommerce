@@ -18,7 +18,7 @@ export const Navigation = (children:any) => {
  
   return (
       <Routes>
-        <Route path="/" element={<Home/>}/>
+        <Route path="/fashionEcommerce" element={<Home/>}/>
         <Route path="/customercare" element={<CostumerCare/>}/>
         <Route path="/signin" element={<SignIn/>}/>
         <Route path="/signup" element={<SignUp/>}/>
