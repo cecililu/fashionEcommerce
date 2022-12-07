@@ -18,12 +18,12 @@ export const Navigation = (children:any) => {
  
   return (
       <Routes>
-        <Route path="/fashionEcommerce" element={<Home/>}/>
-        <Route path="/customercare" element={<CostumerCare/>}/>
-        <Route path="/signin" element={<SignIn/>}/>
-        <Route path="/signup" element={<SignUp/>}/>
-        <Route path="/product/:userId" element={<ProductDetailPage  />}/>
-        <Route path="/cart" element={<CartPage/>}/>
+        <Route path="/fashionEcommerce/" element={<Home/>}/>
+        <Route path="/fashionEcommerce/customercare" element={<CostumerCare/>}/>
+        <Route path="/fashionEcommerce/signin" element={<SignIn/>}/>
+        <Route path="/fashionEcommerce/signup" element={<SignUp/>}/>
+        <Route path="/fashionEcommerce/product/:userId" element={<ProductDetailPage  />}/>
+        <Route path="/fashionEcommerce/cart" element={<CartPage/>}/>
     </Routes>
     )
 }
