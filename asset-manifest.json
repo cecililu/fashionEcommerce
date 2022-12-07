@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/fashionEcommerce/static/css/main.3576e3fc.css",
-    "main.js": "/fashionEcommerce/static/js/main.c013bd96.js",
+    "main.js": "/fashionEcommerce/static/js/main.bee89524.js",
     "static/js/787.c2c1715b.chunk.js": "/fashionEcommerce/static/js/787.c2c1715b.chunk.js",
     "static/media/banner.jpg": "/fashionEcommerce/static/media/banner.b5fa84505916f9d34c13.jpg",
     "index.html": "/fashionEcommerce/index.html",
     "main.3576e3fc.css.map": "/fashionEcommerce/static/css/main.3576e3fc.css.map",
-    "main.c013bd96.js.map": "/fashionEcommerce/static/js/main.c013bd96.js.map",
+    "main.bee89524.js.map": "/fashionEcommerce/static/js/main.bee89524.js.map",
     "787.c2c1715b.chunk.js.map": "/fashionEcommerce/static/js/787.c2c1715b.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.3576e3fc.css",
-    "static/js/main.c013bd96.js"
+    "static/js/main.bee89524.js"
   ]
 }
