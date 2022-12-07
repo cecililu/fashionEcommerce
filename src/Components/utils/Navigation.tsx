@@ -14,8 +14,6 @@ import { CartPage } from '../programs/CartPage';
 export const Navigation = (children:any) => {
   
  
-
- 
   return (
       <Routes>
         <Route path="/fashionEcommerce/" element={<Home/>}/>
